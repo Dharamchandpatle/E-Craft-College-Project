@@ -1,0 +1,318 @@
+{% load static %}
+{% include "app/header.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <link rel="stylesheet" href="{% static "app/css/shopview.css" %}" />
+
+</head>
+<body>
+     <!-- slider -->
+     <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <img src="{% static "app/images/s2.jpg" %}"  class="slider_img">
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="{% static "app/images/s1.jpg" %}" class="slider_img">
+        </div>
+        
+        <div class="mySlides fade">
+          <img src=" {% static "app/images/s3.jpg" %}" class="slider_img">
+        </div>
+        
+        <div class="mySlides fade">
+          <img src=" {% static "app/images/s4.jpg" %}" class="slider_img">
+        </div>
+        <div class="mySlides fade">
+          <img src=" {% static "app/images/s5.jpg" %}" class="slider_img">
+         </div>
+         <script>
+          let slideIndex = 1;
+      showSlides(slideIndex);
+      
+      function plusSlides(n) {
+      showSlides(slideIndex += n);
+      }
+      
+      function currentSlide(n) {
+      showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      }
+        </script>
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+      
+        </div>
+      
+    
+    </div>
+ <!-- slider end -->
+
+ <div class="card">
+     <div class="img">
+        <img src="https://i.etsystatic.com/30136402/r/il/8689a9/5884782380/il_794xN.5884782380_issb.jpg" alt="" onclick="clk(this)"> <br>
+        <img src="https://i.etsystatic.com/30136402/r/il/a663c2/5884783740/il_794xN.5884783740_5k5d.jpg" alt="" onclick="clk(this)"> <br>
+        <img src="https://i.etsystatic.com/30136402/r/il/1dfca7/5884783718/il_794xN.5884783718_pxxc.jpg" alt="" onclick="clk(this)"> <br>
+        <img src="https://i.etsystatic.com/30136402/r/il/0287c9/5884782466/il_794xN.5884782466_atzx.jpg" alt="" onclick="clk(this)"> <br>
+        <img src="https://i.etsystatic.com/30136402/r/il/0287c9/5884782466/il_794xN.5884782466_atzx.jpg" alt="" onclick="clk(this)"> <br>
+             
+    </div> 
+    <div class="left">
+      <img src="https://i.etsystatic.com/30136402/r/il/0287c9/5884782466/il_794xN.5884782466_atzx.jpg" alt="" id="imgs" >
+    </div>
+
+    <div class="right">
+        <h3>PRODUCT DETAILS</h3>
+        <h1>flower lamp</h1>
+        <h1>₹1999.00</h1>
+        <img src="{% static "app/images/Green_review-removebg-preview.png" %}" alt="" style="width: 148px;margin-top: 11px;">
+
+        <h3></h3>
+        <h4>Available Offer's</h4>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta dolore quo repellat libero unde eveniet explicabo animi vel inventore dolor. Earum laboriosam, officia quod asperiores ratione voluptatem quisquam inventore in?</p>
+
+
+    </div>
+</div>
+
+
+
+<div class="product-section">
+    <div class="title">
+    <h4> Trending product</h4>
+
+    </div>
+    <div class="product" id="product1">
+        <div class="product-image">
+            <a href=""><img src="https://i.etsystatic.com/24849185/r/il/452110/5461929454/il_794xN.5461929454_2z6i.jpg" alt="Product 1"></a>
+        </div>
+        <div class="product-info">
+            <h3>Handmade</h3>
+            <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, asperiores</p>
+            <div class="star">
+               
+                <img src="{% static "app/images/Green_review-removebg-preview.png" %}" alt="" style=" width: 97px;margin-top: -11px;">
+
+            </div>
+            <p class="price">₹199</p>
+          </div>
+    </div>
+  
+    <div class="product" id="product1">
+        <div class="product-image">
+            <a href="/product"><img src="https://i.etsystatic.com/39880804/r/il/eb4723/5439549488/il_794xN.5439549488_uekg.jpg" alt="Product 1"></a>
+        </div>
+        <div class="product-info">
+            <h3>Handmade</h3>
+            <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, asperiores</p>
+            <div class="star">
+                <img src="{% static "app/images/Green_review-removebg-preview.png" %}" alt="" style=" width: 97px;margin-top: -11px;">
+
+            </div>
+            <p class="price">₹200</p>
+          </div>
+    </div>
+  
+    <div class="product" id="product1">
+        <div class="product-image">
+            <img src="https://i.etsystatic.com/28333862/r/il/4daeca/4327962752/il_794xN.4327962752_1nd1.jpg" alt="Product 1">
+        </div>
+        <div class="product-info">
+            <h3>Handmade</h3>
+            <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, asperiores</p>
+            <div class="star">
+                <img src="{% static "app/images/Green_review-removebg-preview.png" %}" alt="" style=" width: 97px;margin-top: -11px;">
+
+
+            </div>
+            <p class="price">₹249</p>
+          </div>
+    </div>
+  
+    <div class="product" id="product1">
+        <div class="product-image">
+            <img src="https://i.etsystatic.com/28333862/r/il/8f0187/4514618994/il_794xN.4514618994_bloi.jpg" alt="Product 1">
+        </div>
+        <div class="product-info">
+            <h3>Handmade</h3>
+            <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, asperiores</p>
+            <div class="star">
+                <img src="{% static "app/images/Green_review-removebg-preview.png" %}" alt="" style=" width: 97px;margin-top: -11px;">
+
+
+            </div>
+            <p class="price">₹299</p>
+          </div>
+    </div>
+  
+    <div class="product" id="product1">
+        <div class="product-image">
+            <img src="https://i.etsystatic.com/28333862/r/il/a54837/5306798288/il_794xN.5306798288_shbv.jpg" alt="Product 1">
+        </div>
+        <div class="product-info">
+            <h3>Handmade</h3>
+            <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, asperiores</p>
+            <div class="star">
+                <img src="{% static "app/images/Green_review-removebg-preview.png" %}" alt="" style=" width: 97px;margin-top: -11px;">
+
+            </div>
+            <p class="price">₹199</p>
+          </div>
+    </div>
+  
+    <div class="product" id="product1">
+        <div class="product-image">
+            <a href="/contactus"><img src="https://i.etsystatic.com/26868088/r/il/0b7e15/4011955641/il_794xN.4011955641_p55a.jpg" alt="Product 1"></a>
+        </div>
+        <div class="product-info">
+            <h3>Handmade</h3>
+            <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, asperiores</p>
+            <div class="star">
+                <img src="{% static "app/images/Green_review-removebg-preview.png" %}" alt="" style=" width: 97px;margin-top: -11px;">
+
+
+            </div>
+            <p class="price">₹300</p>
+          </div>
+    </div>
+  
+    <div class="product" id="product1">
+        <div class="product-image">
+            <a href="/product"><img src="https://i.etsystatic.com/28333862/r/il/e57426/5354975757/il_794xN.5354975757_5uho.jpg" alt="Product 1"></a>
+        </div>
+        <div class="product-info">
+            <h3>Handmade</h3>
+            <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, asperiores</p>
+            <div class="star">
+                <img src="{% static "app/images/Green_review-removebg-preview.png" %}" alt="" style=" width: 97px;margin-top: -11px;">
+
+
+            </div>
+            <p class="price">₹200</p>
+          </div>
+    </div>
+  
+    <div class="product" id="product1">
+        <div class="product-image">
+            <img src="https://i.etsystatic.com/17120265/r/il/96eaa9/4842041359/il_794xN.4842041359_emmm.jpg" alt="Product 1">
+        </div>
+        <div class="product-info">
+            <h3>Handmade</h3>
+            <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, asperiores</p>
+            <div class="star">
+                <img src="{% static "app/images/Green_review-removebg-preview.png" %}" alt="" style=" width: 97px;margin-top: -11px;">
+
+
+            </div>
+            <p class="price">₹399</p>
+          </div>
+    </div>
+  
+    <div class="product" id="product1">
+        <div class="product-image">
+            <img src="https://i.etsystatic.com/28333862/r/il/a95ed9/4375357349/il_794xN.4375357349_pehn.jpg" alt="Product 1">
+        </div>
+        <div class="product-info">
+            <h3>Handmade</h3>
+            <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, asperiores</p>
+            <div class="star">
+                <img src="{% static "app/images/Green_review-removebg-preview.png" %}" alt="" style=" width: 97px;margin-top: -11px;">
+
+            </div>
+            <p class="price">₹199</p>
+          </div>
+    </div>
+  
+  
+    <div class="product" id="product1">
+        <div class="product-image">
+            <img src="https://i.etsystatic.com/35851354/r/il/a2a287/5195883156/il_794xN.5195883156_f4f2.jpg" alt="Product 1">
+        </div>
+        <div class="product-info">
+            <h3>Handmade</h3>
+            <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, asperiores</p>
+            <div class="star">
+                <img src="{% static "app/images/Green_review-removebg-preview.png" %}" alt="" style=" width: 97px;margin-top: -11px;">
+
+
+            </div>
+            <p class="price">₹199</p>
+          </div>
+    </div>
+  
+    <div class="product" id="product1">
+        <div class="product-image">
+            <img src="https://i.etsystatic.com/28333862/r/il/d6a516/4375359477/il_794xN.4375359477_iwl5.jpg" alt="Product 1">
+        </div>
+        <div class="product-info">
+            <h3>Handmade</h3>
+            <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, asperiores</p>
+            <div class="star">
+                <img src="{% static "app/images/Green_review-removebg-preview.png" %}" alt="" style=" width: 97px;margin-top: -11px;">
+
+
+            </div>
+            <p class="price">₹500</p>
+          </div>
+    </div>
+  
+    <div class="product" id="product1">
+        <div class="product-image">
+            <img src="https://i.etsystatic.com/35851354/r/il/d98578/5845095157/il_794xN.5845095157_qdzu.jpg" alt="Product 1">
+        </div>
+        <div class="product-info">
+            <h3>Handmade</h3>
+            <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, asperiores</p>
+            <div class="star">
+                <img src="{% static "app/images/Green_review-removebg-preview.png" %}" alt="" style=" width: 97px;margin-top: -11px;">
+
+
+            </div>
+            <p class="price">₹199</p>
+          </div>
+    </div>
+     
+</div>
+
+
+<script>
+    function clk(newImg){
+        let getImg=document.getElementById("imgs");
+        getImg.src=newImg.src;
+    }
+</script>
+</body>
+</html>
+
+{% include "app/footer.html" %}

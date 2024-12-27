@@ -1,0 +1,105 @@
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Craft E- Commerce Web</title>
+  <!-- css link  -->
+  <link rel="stylesheet" href="{% static "app/css/style.css" %}" />
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+  <script>
+    if (annyang) {  
+      
+    var commands = {
+      'message': () => { alert('Hello Sir welcome to Ecraft Website'); }
+    };
+    
+    // Add our commands to annyang
+    annyang.addCommands(commands);
+   
+  
+    // Start listening.
+    annyang.start();
+
+    }
+    </script>
+  
+</head>
+
+<div class="main-div">
+  <!-- ----------------- Nvigation Bar --------------------- -->
+  <nav class="nav">
+    <div class="logo">
+      <a href="/" class="logo"><img src="{% static "app/images/logo.png" %}" alt=""></a>
+    </div>
+    <div class="search">
+        <form method="get" action="/search">
+      <input type="text"  name="search" placeholder="Search for Products, Brands and More" />
+      <button type="submit" style="font-size: 18px;border: none; color: black; margin-left: 20rem;"><a href="/search" style="text-decoration: none;color: grey;"> <i class="fa fa-search"></i></a></button>
+        </form>
+      
+    </div>
+    {% comment %} {% if user is None %} {% endcomment %}
+
+    {% comment %} {% else %} {% endcomment %}
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="dropdown">
+        <a href="/login"  class="es">sign-in
+        </a>
+      </div>
+    </div>
+    
+    <a href="/selling" class="navlink">Selling </a>
+    {% comment %} {% endif %} {% endcomment %}
+
+   
+    
+    <a href="/show/" class="navlink">
+      <img src="{% static "app/images/cartimg.png" %}" alt="" height="70%" width="15%" style="margin-left: -4rem;">
+
+      Cart</a>
+
+    <a href="/profile/" class="navlink"><img src="{% static "app/images/user_img-removebg-preview.png" %}" alt="" height="100%" width="75%" style="margin-left: -9rem;">
+    </a>
+    
+  </nav>
+
+  <!-- --------------- Second Navigation Bar -------------------- -->
+  <section class="second-nav">
+    <nav class="second-nav1">
+      <ul>
+        <li class="li"><a href="/">Home </a></li>
+        <li class="li"><a href="/category"> Categories</a></li>
+        <li class="li"><a href="/aboutus">About Us</a></li>
+        <li class="li"><a href="/ngo">NGO's </a></li>
+        <li class="li"><a href="/contactus">Contact Us </a></li>
+        {% if request.user.is_authenticated %}
+        <li class="li"><a href="/orders">Order</a></li>
+        {% else %}
+        <li class="li"><a href="/login">Order</a></li>
+        {% endif %}
+        <li class="li"><a href="/design">Design</a></li>
+
+      </ul>
+
+    </nav>
+  </section>
+  
+  <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/6652b10c9a809f19fb353b4d/1hupg77a0';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
+  {% comment %} https://dashboard.tawk.to/#/chat {% endcomment %}
+

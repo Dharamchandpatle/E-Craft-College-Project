@@ -1,0 +1,63 @@
+{% load static %}
+{% include "app/header.html" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Products </title>
+    <link rel="stylesheet" href="{% static "app/css/searchProduct.css" %}">
+</head>
+<body>
+    {% if results %}
+    {% for b in results  %}
+    <div class="search-products-page"> 
+
+    <div class="search-products"> 
+
+        <div class="pro-img">
+        <a href="{% url 'product-detail' b.id %}"><img src="{{b.product_image.url}}" alt="Product Image " class="img"></a>
+        </div>
+        <div class="pro-details">
+            <h2 class="h2">Lamp Stand </h2>
+            <h3 class="h3">{{b.title}} </h3>
+
+            <div class="price">
+                <h3><span class="span">₹{{b.price}}</span>&nbsp; <del class="del">₹1,880</del> &nbsp; <span class="span2"> (10% off)</span> </h3>
+              </div>
+
+            <div class="review">
+              <h3><span class="spanh3">4.8</span> &nbsp; (197) . ThisGrovyStore</h3>
+              <img src="{% static "app/images/Green_review-removebg-preview.png" %}" alt=""style=" height:25; width:15%;">
+            </div>
+
+            <div class="pro-des">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi in, laborum accusamus dolorum inventore nam quos facilis voluptate, cupiditate dolorem magnam consequatur porro, doloremque .
+            </div>
+            <div class="buy-cart">
+                <div class="cart">
+                    <a href="cart.html"  class="btn " >Add To Cart </a>
+                </div>
+                <div class="buy">
+                    <a href="{% url "payment"  %}" class="btn1 ">Buy Now </a>
+                </div>
+                
+            </div>
+          </div>
+    </div>
+    
+</div> 
+
+
+   {% endfor %} 
+   {% else %}
+  
+   <div>
+    <img src="{% static "app/images/emptysearch.png" %}" alt=""style="width:100%; margin-top:10px;">
+
+   </div>
+
+   {% endif %}
+</body>
+</html>
+{% include "app/footer.html" %}
+

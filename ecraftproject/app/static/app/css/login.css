@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+html body {
+  height: 100%;
+  width: 100%;
+}
+
+
+body,input {
+    font-family: "Poppins", sans-serif;
+    background: #f9eeee;
+}
+
+.left-sign {
+    background:#f3ab00;
+    color: #ffffff;
+    height: 90%;
+    padding: 0 2rem;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    >.containt {
+        padding: 2rem 0;
+
+        >h1 {
+            line-height: 1rem;
+        }
+
+        >p {
+            line-height: 4rem;
+        }
+    }
+}
+.log{
+  width: 100%;
+  height: 100%;
+}
+.logo2 {
+    height: 15%;
+    width: 40%;
+}
+
+.container1 {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ffffff;
+    /* overflow: hidden; */
+}
+
+.forms-container {
+    position: absolute;
+    width: 100%;
+    height: 95%;
+    top: 20%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.signin {
+
+    display: grid;
+    grid-template-columns: 1fr;
+    z-index: 5;
+    background: #ffffff;
+    width: 30%;
+    height: 90%;
+    padding: 26px 46px;
+}
+
+#fr2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 0.2s 0.7s;
+    overflow: hidden;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+form.sign-in-form {
+    z-index: 2;
+}
+
+.title2 {
+    font-size: 2.2rem;
+    color: black;
+    margin-bottom: 10px;
+    padding: 0px 126px;
+}
+
+.input-field1 {
+    max-width: 380px;
+    width: 100%;
+    background-color: #f0f0f0;
+    margin: 10px 0;
+    height: 55px;
+ 
+ 
+    border-radius: 55px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    padding: 0 0.4rem;
+    position: relative;
+}
+
+.input-field1 .input1 {
+    background: unset;
+    outline: none;
+    border: none;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+    border-radius: 30px;
+}
+
+.input-field1 .input2 {
+    background: unset;
+    outline: none;
+    border: none;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+    border-radius: 30px;
+}
+
+.input-field1 .input3 {
+    background: unset;
+    outline: none;
+    border: none;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+    border-radius: 30px;
+}
+
+.input-field1 input::placeholder {
+    color: grey;
+    font-weight: 500;
+}
+
+.social-text {
+    padding: 0.7rem 0;
+    font-size: 1rem;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icon {
+    height: 46px;
+    width: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0.45rem;
+    color: #333;
+    border-radius: 50%;
+    border: 1px solid #333;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.social-media a i {
+    color: #333;
+}
+
+.social-icon:hover {
+    color: #4481eb;
+    border-color: #4481eb;
+}
+
+  
+  .btn-box  .btn {
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: .6s;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    width: 150px;
+    border: 2px solid  rgb(4, 209, 4);
+    background-color:  rgb(4, 209, 4);
+    height: 50px;
+    border-radius: 49px;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 12px 115px;
+}
+
+.btn::before {
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 0;
+    height: 100%;
+    transition: .5s;
+    background: transparent;
+    z-index: -1;
+}
+
+.btn:hover::before {
+    width: 100%;
+}
+
+.btn:hover {
+    color: #ffffff;
+    border: none;
+    box-shadow: #f3ab00 0px 3px 7px;
+}
+
+.btn::before {
+    background: #f3ab00;
+}
+
+
+
+.btn3{
+    padding-top: 1rem;
+    color: #000;
+    text-decoration: none;
+    margin: 1px 105px;
+}
+.btn3:hover{
+    text-decoration: dashed;
+    color: green;
+}
+
+.h5{
+    margin-top: 7rem;
+    >a:hover{
+        color: green;
+    }
+}

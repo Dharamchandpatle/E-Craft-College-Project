@@ -1,0 +1,31 @@
+{% load static %}
+{% include "app/header.html" %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGO's Page</title>
+    <link rel="stylesheet" href="{% static "app/css/ngo.css" %}">
+</head>
+
+<body>
+    <div class="main-div">
+        <div class="ngo-page">
+            <div class="ngo">
+                <img src="{% static "app/images/logo.png" %}" style="height: 66px;width: 136px;margin-top: -43px;" alt="Logo">
+                <h1>Welcome to E-Craft </h1><br>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore alias placeat iusto ad dicta exercitationem possimus rerum molestias et nostrum! Libero sint assumenda, molestias quos aspernatur debitis eveniet ipsa dolorum!</p><br>
+
+                <!-- <a class="btn" href="signup.html">Create an Account ?</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                <a class="btn" href="/register">Enter your details ? </a>
+            </div>
+            <img  src="{% static "app/images/NGO-bg-photo.jpg" %}" alt="" class="ngo-img">
+
+        </div>
+    </div>
+</body>
+
+</html>
+{% include "app/footer.html" %}

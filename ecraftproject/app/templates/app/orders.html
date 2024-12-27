@@ -1,0 +1,56 @@
+{% include "app/header.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<title>Add to cart </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{% static "app/css/card.css" %}">
+
+<body>
+     {% if op %}  
+     {% for op in op%}
+    <div class="buy-now">
+        <div class="left-page">
+            <div class="pro-img">
+                <img style="width: 15rem;height: 15rem;" src="{{op.product.product_image.url}}" alt="" class="img">
+            </div>
+            <div class="pro-details">
+                <h2 class="h2">Lamp Stand </h2>
+                <h2>{{op.product.title}}</h2>
+                <h3>{{op.product.description}}</h3>
+                <h3>QTY : 1</h3>
+                <h3>order status: {{op.status}}</h3>
+                <a href="/orderhistory" style="text-decoration: none; color :green;">Order Tracking</a>
+
+                <form action="/remove1">
+
+                    <button type="submit"  id="but" name="submit" class="btn solid">Remove</button>
+                </form>
+                {% comment %} {% if op.status =='Packed' %}
+                <button type="submit"  id="but" name="submit" class="btn solid">Accepted</button>
+                {% endif %} {% endcomment %}
+               
+            </div>
+            <div class="pro-price">
+                {% comment %} <h3>{{cart.product.dis_price}}</h3> {% endcomment %}
+
+            </div>
+            <div class="pro-total">
+                <h3>₹ {{op.product.price}}</h3>
+
+            </div>
+        </div>
+    </hr>
+        
+    </div>
+      {% endfor %}
+      {% else %}
+      <img src="{% static "app/images/emptycard.jpg" %}" alt=""style="width:100%; margin-top:10px;">
+         
+      {% endif %}
+    
+
+    {% include "app/footer.html" %}
+</body>
+
+</html>

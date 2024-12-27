@@ -1,0 +1,57 @@
+{% load static %}
+{% include "app/header.html" %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign-Up</title>
+    <link rel="stylesheet"  href="{% static "app/css/signup.css" %}" />
+   
+  
+  </head>
+  <body>
+
+<div class="signin" style="    margin-left: 33rem;
+margin-top: 29px;">
+    <form id="fr1" method="POST" action="" style="margin-top:-110px;" class="sign-in-form">
+                 {% if messages %}
+      {% for message in messages %}
+      <p {% if message.tags %} class="alert alert-{{message.tags}}" {% endif %}>{{message}}</p>
+      {% endfor %}
+      {% endif %}
+      {% csrf_token %}
+
+      <h2 class="title1">Edit Profile</h2>
+      <div class="input-field1">
+        <img src="{% static "app/images/user_img-removebg-preview.png" %}" alt="" height="75%" width="55%" style="padding-top: 0.8rem; padding-left: 0.2rem;">
+        <input name="username" required type="text" placeholder="Username" class="input1" />
+      </div>
+      <div class="input-field1">
+          <img src="{% static "app/images/Emailimg.png" %}" alt=""  height="75%" width="55%" style="padding-top: 0.8rem; padding-left: 0.2rem;">
+          <input type="email" required name="email" placeholder="Email ID"  class="input2"/>
+        </div>
+      <div class="input-field1">
+        <img src="{% static "app/images/user_img-removebg-preview.png" %}" alt="" height="75%" width="55%" style="padding-top: 0.8rem; padding-left: 0.2rem;">
+        <input type="text" required name="gender" placeholder="enter gender" class="input3"/>
+      </div>
+      <div class="input-field1">
+        <img src="{% static "app/images/phone2.png" %}" alt="" height="75%" width="55%" style="padding-top: 0.8rem; padding-left: 0.2rem;">
+          <input type="number" required name="mobile_no" placeholder="enter phone no.." class="input3"/>
+        </div>
+      <div class="input-field1">
+          <img src="{% static "app/images/address2.png" %}" alt="" height="75%" width="55%" style="padding-top: 0.8rem; padding-left: 0.2rem;">
+            <input type="text"required name="address" placeholder="enter address.." class="input3"/>
+        </div>
+      <div class="btn-box">
+        <button type=""  id="but" name="submit" class="btn solid">Edit</button>
+      </div>
+      {% comment %} <h5 class="h5">
+          Alredy have an Account? <a href="/login">Login </a></h5> {% endcomment %}
+     
+      </div>
+    </form>
+    
+  </div>
+</body>
+</html>
+  {% include "app/footer.html" %}

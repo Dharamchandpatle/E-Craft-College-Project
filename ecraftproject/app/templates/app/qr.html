@@ -1,0 +1,30 @@
+
+{% load static %}
+{% include "app/header.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <link rel="stylesheet" href="{% static "app/css/forget.css" %}">
+
+</head>
+<body>
+    <section style="width: 50%;margin: 6rem 26rem;text-align: center;height: 47rem;border: 2px solid grey;padding: 7rem 1rem;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;background-color: aliceblue;">
+        <img src="{% static "app/images/logo.png" %}" style="height: 66px;width: 136px;margin-top: -43px;" alt="Logo">
+  
+    <div style="margin: 22px 18px;">
+                 <p>Scan the QR Code with any UPI App and pay the amount then download the source code.</p>
+                    <center><img src="{% static "app/images/qrcode.jpg" %}" style="margin: 12px 0px;"></center>
+                   <div class="flex m20">
+                    <label>UTR/REFERENCE/TRANSACTION ID**</label>
+                   <input style="height: 34px;width: 27rem; border-radius: 20px; padding: 0px 22px; margin: 11px 1px;" type="number" name="email" placeholder="UTR/REFERENCE/TRANSACTION ID**" />
+                    </div>
+     <button type="submit"  id="but" name="submit" id="forget2" class="btn solid">PAY NOW </button>
+                       
+              </div>
+</section>
+</body>
+</html>
+{% include "app/footer.html" %}

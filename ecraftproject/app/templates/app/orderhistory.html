@@ -1,0 +1,52 @@
+{% load static %}
+{% include "app/header.html" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static "app/css/orderhistory.css" %}">
+</head>
+<body>
+    <section class="container3" id="Service">
+       
+        <div class="order-left-right">
+          <div class="order">
+
+                <h1>Order Tracking</h1>
+                <p class="description">Track your order in real-time. Below you can see the current status of your order as it progresses through the different stages of delivery.</p>
+
+          </div><br><br>
+
+                <div class="order-status ">
+                    <div class="status ordered resume-border">
+                        <div class="icon" >✔</div>
+                        <div class="text">Ordered</div> <br>
+                        <div class="details">Your order has been placed.</div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="status in-transit resume-border" >
+                         <div class="icon">🚚</div>
+                        <div class="text">In Transit</div> <br>
+                        <div class="details">Your order is on the way.</div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="status out-for-delivery resume-border">
+                        <div class="icon">📦</div>
+                        <div class="text">Out for Delivery</div> <br>
+                        <div class="details">Your order is out for delivery.</div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="status delivered resume-border" style="border: none;">
+                        <div class="icon">🏠</div>
+                        <div class="text">Delivered</div> <br>
+                        <div class="details">Your order has been delivered.</div>
+                    </div>
+                </div>
+
+         
+        </div>
+      </section>
+</body>
+</html>
+{% include "app/footer.html" %}

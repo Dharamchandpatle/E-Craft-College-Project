@@ -1,0 +1,70 @@
+{% load static %}
+{% include "app/header.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static "app/css/contactus.css" %}">
+   
+   
+</head>
+<body>
+    <!--main section  -->
+  <main class="con">
+        <!-- img section -->
+        <section class=" first-section">
+          <img  class=" first-section" src="{% static "app/images/hero-bg.jpg" %}" alt="" >
+       
+</section>
+       <!-- <!-second section-  --> 
+         <section>
+          <div class="second-first">
+            <div class="part-1">
+              <form  method="POST" action="">
+                {% csrf_token %}
+                <h1 style=" margin: 19px 70px;">Contact Us</h1>
+              <label for=""></label> 
+              <input style="border-radius: 43px;" type="text" name="username" id="" placeholder="Enter your name"> <br> <br>
+            <label for=""></label>
+            <input style="border-radius: 43px;" type="email" name="email" id="" placeholder="Enter your email address" > <br> <br>
+            <label for=""></label>
+            <input style="border-radius: 43px;" type="text" name="address" id="" placeholder="Enter your address" > <br> <br>
+
+            {% comment %} <textarea name=" " id="" cols="30" placeholder="Enter your message"></textarea> <br> <br> {% endcomment %}
+           {% comment %} <button type="submit" class="con1">submit</button> {% endcomment %}
+           <button type="submit"  id="but" name="" class="btn solid">Create</button>
+          
+          </form> 
+            </div>
+            <div class="part2" >
+              <img src="{% static "app/images/social media.png" %}" alt="" width="89%">
+              <div>
+                <div class="
+                location">
+              <img src="{% static "app/images/call-removebg-preview.png" %}" alt="" width="30px">
+             <a href="tel">9131341101</a>
+            </div> <br>
+            <div class="location">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS40WhLZ3iDgCcbCoVzH7T-9PpsI9U22IGNaSmO9dvOqg&s" alt="" width="30px">
+              <a href="https://wa.me/+919131341101">Chat with us</a>
+            </div> <br>
+            <div class="location">
+            <img src="{% static "app/images/email-removebg-preview.png" %}" alt="" width="30px">
+            <a href="mailto:">EcraftWebsite@gmail.com</a>
+            </div>
+
+             
+            </div>
+            </div>
+          </div>
+         </section> 
+  
+
+ 
+  </main>
+</div>
+{% include "app/footer.html" %}
+</body>
+</html>

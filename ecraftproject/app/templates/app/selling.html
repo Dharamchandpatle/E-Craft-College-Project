@@ -1,0 +1,56 @@
+{% load static %}
+{% include "app/header.html" %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGO's Page</title>
+    <link rel="stylesheet" href="{% static "app/css/selling.css" %}">
+</head>
+
+<body>
+    <div class="main-div">
+        <div class="ngo-page">
+            <div class="ngo" style=" margin-right: 38rem;">
+                <img src="{% static "app/images/logo.png" %}" style="height: 66px;width: 136px;margin-top: -43px;" alt="Logo">
+                <h1 style="color:black;">Welcome to E-Craft </h1><br>
+                <p style="color:black;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore alias placeat iusto ad dicta exercitationem possimus rerum molestias et nostrum! Libero sint assumenda, molestias quos aspernatur debitis eveniet ipsa dolorum!</p><br>
+                <a class="btn" href="/shop/">Start Selling </a>
+            </div>
+            <img style=" margin-left: 31rem; width: 65%;height: 732px;" src="{% static "app/images/BecomaSeller5-removebg-preview.png" %}" alt="" class="ngo-img">
+
+        </div>
+    </div>
+
+
+    <div id="about">
+        <h1> <b>Why Sell on E-Craft ?</b</h1><br><br>
+          <div class="text1">
+            <img src="{% static "app/images/BecomaSeller1-removebg-preview.png" %}" alt=""><br>
+            <h2>𝐑𝐞𝐜𝐞𝐢𝐯𝐞 𝐭𝐢𝐦𝐞𝐥𝐲 <br>  𝐩𝐚𝐲𝐦𝐞𝐧𝐭𝐬</h2>
+            <p>Renewo ensures your payments are <br> deposited directly in your bank account <br> within 7-14 days.
+            </p>
+  
+          </div>
+          <div class="text1">
+            <img src="{% static "app/images/BecomaSeller2-removebg-preview.png" %}" alt=""><br>
+            <h2>𝐑𝐞𝐚𝐜𝐡 𝐜𝐫𝐨𝐫𝐞𝐬 𝐨𝐟  <br> 𝐜𝐮𝐬𝐭𝐨𝐦𝐞𝐫𝐬</h2>
+            <p>Sell to crores of engaged customer <br>visiting Renewo.in on desktop and <br> through our mobile app.</p>
+  
+          </div>
+          <div class="text1">
+            <img src="{% static "app/images/BecomaSeller3-removebg-preview.png" %}" alt=""><br>
+            <h2>𝐒𝐭𝐫𝐞𝐬𝐬-𝐟𝐫𝐞𝐞 <br>  𝐝𝐞𝐥𝐢𝐯𝐞𝐫𝐲</h2>
+            <p>Deliver to 100% of India's serviceable <br> pincodes, through Easy Ship & Fulfillment <br> by Renewo</p>
+  
+          </div>
+  
+      </div>
+  
+
+</body>
+
+</html>
+{% include "app/footer.html" %}

@@ -1,0 +1,110 @@
+{% include "app/header.html" %}
+{% load static %}
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign-In</title>
+    <link rel="stylesheet"  href="{% static "app/css/login.css" %}" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+
+    <script>
+      if (annyang) {  
+        
+      var commands = {
+        'alert': () => { alert('Hello Sir welcome to Ecraft Website'); }
+      };
+      var khushal = {
+         'username *tag': function(variable){
+          let uname = document.getElementById("uname");
+          uname.value = variable;
+         }
+       
+      }
+      var khushall = {
+        'password *tag': function(variable){
+          let pas = document.getElementById("pas");
+          pas.value = variable;
+         }
+       
+      }
+      
+      // Add our commands to annyang
+      annyang.addCommands(commands);
+      annyang.addCommands(khushal);
+      annyang.addCommands(khushall);
+    
+      // Start listening.
+      annyang.start();
+
+      }
+      </script>
+        
+  </head>
+  <body>
+	<section class="log">
+    <div class="container1">
+       
+      <div class="forms-container">
+        <div class="left-sign">
+            <div class="containt">
+                <img src="{% static "app/images/logo.png" %}" alt=""  class="logo2">
+                <h1>Welcome Back </h1>
+                <p>
+                    to get started please login with your personal info
+                </p>
+                <!-- <div class="btn-box">
+                  <button type="submit"  id="but" name="submit" class="btn solid">Sign In</button>
+                </div> -->
+                
+            </div>
+        </div>
+        <div class="signin">
+          <form id="fr2" method="POST" action="" class="sign-in-form">
+			{% csrf_token %}
+     
+            <h2 class="title">Sign In</h2>
+            <div class="input-field1">
+              <img src="{% static "app/images/user_img-removebg-preview.png" %}" alt="" height="75%" width="55%" style="padding-top: 0.8rem; padding-left: 0.2rem;">
+
+              <input name="username" required id="uname" type="text" placeholder="Username" class="input1" />
+            </div>
+            <div class="input-field1">
+              <img src="{% static "app/images/Passwordimg.png" %}" alt="" height="75%" width="55%" style="padding-top: 0.8rem; padding-left: 0.2rem;">
+              <input type="password" id="pas" required name="password" placeholder="Password" class="input3"/>
+            </div>
+            <div class="btn-box">
+              <button type="submit"  id="but" name="submit" class="btn solid">Sign In</button>
+            </div>
+            <a href="{% url 'reset_password'%}" class="btn1"style="text-decoration:none; color:black;">Forgot Password</a>
+            <h5 class="h5">Don't have an Account? <a href="/register"style="text-decoration:none;" >SignUp</a></h5>
+           
+            </div>
+          </form>
+		  
+		</div>
+	</div>
+	
+</div>
+</section>
+{% include "app/footer.html" %}
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

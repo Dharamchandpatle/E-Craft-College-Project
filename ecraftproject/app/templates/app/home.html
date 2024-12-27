@@ -1,0 +1,282 @@
+
+{% load static %}
+{% include "app/header.html" %}
+
+{% if messages %}
+{% for message in messages %}
+
+    <p {% if message.tags %} class="alert alert-{{message.tags}}" style="box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .23); background-color: beige;color: black;   padding: 0px 40%;font-size: 20px;font-family: auto;" {% endif %}>{{user.username}}  {{message}}  </p>
+{% endfor %}
+{% endif %}
+<!--shop-->
+<div class="effect">
+</div>
+{% comment %} <a href="https://wa.me/+919988776655?text=I'm%20interested%20in%20to%chat" >
+  <img src="{% static "app/images/chat2.webp" %}" alt="" style="width: 71px;height: 57px; position: fixed; bottom: 111px; right: 20px;" >
+</a> {% endcomment %}
+
+<div class="shopsection">
+  <section class="shoprow">
+      <div class="shop">            
+          <div class="shop2">
+            <a href="/shopview" > <img alt="" src="https://i.etsystatic.com/6748817/c/1999/1999/0/1001/il/e5e6da/3728705376/il_300x300.3728705376_or8r.jpg">
+            </a>
+              <p>Personalised Gifts</p>
+             <button>
+              <span><a href="/shopview" style="text-decoration:none; color:black;" >More like this</a></span>
+             </button>
+          </div>
+         </div>
+      
+      <div class="shop">            
+          <div class="shop2">
+            <a href="/shopview"><img alt="" src="https://i.etsystatic.com/16603535/r/il/47f01a/2488199207/il_340x340.2488199207_nkjm.jpg">
+            </a>
+              <p>Personalised Gifts</p>
+             <button>
+              <span><a href="/shopview" style="text-decoration:none; color:black;" >More like this </a> </span>
+             </button>
+          </div>
+         </div>
+         <div class="shop">            
+          <div class="shop2">
+            <a href="/shopview" ><img alt="" src="https://i.etsystatic.com/14304132/r/il/ebf0a0/1164546735/il_340x340.1164546735_hemq.jpg">
+            </a>
+              <p>Personalised Gifts</p>
+             <button>
+              <span><a href="/shopview" style="text-decoration:none; color:black;" >More like this  </a>  </span>
+             </button>
+          </div>
+         </div>
+         <div class="shop">            
+          <div class="shop2">
+             <a href="/shopview" ><img alt="" src="https://i.etsystatic.com/33226786/r/il/cb2bb9/3708065417/il_340x340.3708065417_a6mq.jpg">
+             </a>
+              <p>Personalised Gifts</p>
+             <button>
+              <span><a href="/shopview" style="text-decoration:none; color:black;" >More like this</a></span>
+             </button>
+          </div>
+         </div>
+         <div class="shop">            
+          <div class="shop2">
+            <a href="/shopview"  > <img alt="" src="	https://i.etsystatic.com/41525324/r/il/a674da/5691035771/il_340x340.5691035771_ha97.jpg">
+            </a>
+              <p>Personalised Gifts</p>
+             <button>
+              <span><a href="/shopview" style="text-decoration:none; color:black;" >More like this</a></span>
+             </button>
+          </div>
+         </div>
+         <div class="shop">            
+          <div class="shop2">
+            <a href="/shopview"  ><img alt="" src="https://i.etsystatic.com/5132116/r/il/55d04f/4697691330/il_340x340.4697691330_gdtx.jpg">
+            </a>
+              <p>Personalised Gifts</p>
+             <button>
+              <span><a href="/shopview" style="text-decoration:none; color:black;" >More like this</a>  </span>
+             </button>
+          </div>
+         </div>
+                       
+</section>
+</div>
+
+ <!-- End shop -->
+
+<!-- images-->
+<div><img src="{% static "app/images/newcollection.jpg" %}" class="imagesilder"></div>
+<div class="img1"> </div>
+ <div class="img2"></div>
+<!-- End images-->
+<!--  Product  --> 
+
+<div class="product-section">
+  <div class="title">
+  <h4> our trending product</h4>
+
+  </div>
+  {% for b in bambooCraft %}
+  <div class="product" id="product1">
+      <div class="product-image">
+          <a href="{% url 'product-detail' b.id %}"><img src="{{b.product_image.url}}" alt="Product 1"></a>
+      </div>
+
+      <div class="pro-details">
+        <h3 class="h3">{{b.title}}</h3>
+        <div class="review">
+          <h3>4.8 &nbsp; (197) . Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h3>
+          <img src="{% static "app/images/Green_review-removebg-preview.png" %}" alt="">
+        </div>
+        <div class="price">
+          <h3><span class="span">₹{{b.price}} </span> </h3>
+        </div>
+      </div>
+  </div>
+  {% endfor %}               
+</div>
+<!-- End Product -->
+
+                {% comment %} Slider {% endcomment %}
+
+                <div class="slideshow-container">
+
+                  <div class="mySlides fade">
+                    <img src="{% static "app/images/s2.jpg" %}" class="slider_img">
+                  </div>
+                  
+                  <div class="mySlides fade">
+                    <img src="{% static "app/images/s1.jpg" %}" class="slider_img">
+                  </div>
+                  
+                  <div class="mySlides fade">
+                    <img src=" {% static "app/images/s2.jpg" %}" class="slider_img">
+                  </div>
+                  
+                  <div class="mySlides fade">
+                    <img src=" {% static "app/images/s3.jpg" %}" class="slider_img">
+                  </div>
+                  <div class="mySlides fade">
+                    <img src=" {% static "app/images/s4.jpg" %}" class="slider_img">
+                   </div>
+                   <script>
+                    let slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+                }
+                  </script>
+                  <a class="prev" onclick="plusSlides(-1)">❮</a>
+                  <a class="next" onclick="plusSlides(1)">❯</a>
+                  
+                  </div>
+                  <br>
+                  
+                  <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span> 
+                    <span class="dot" onclick="currentSlide(2)"></span> 
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                
+                  </div>
+                
+              
+              </div>
+              {% comment %} slider end {% endcomment %}
+              <!-- shop  -->
+              
+              <div class="shopsection" >
+                  <div class="shopheading">
+                      <h4> our trending shop</h4>
+                  </div> 
+                  <section class="shoprow">
+                      <div class="shop">            
+                          <div class="shop2">
+                            <a href="/shopview"  ><img alt="" src="https://i.etsystatic.com/5132116/r/il/55d04f/4697691330/il_340x340.4697691330_gdtx.jpg">
+                            </a> 
+                            <p>Personalised Gifts</p>
+                             <button>
+                              <a href="/shopview" style="text-decoration:none; color:black;" ><span>More like this  </span></a>
+                             </button>
+                          </div>
+                         </div>
+                      
+                      <div class="shop">            
+                          <div class="shop2">
+                             <img alt="" src="https://i.etsystatic.com/20810289/r/il/e5ac4c/5491140017/il_340x340.5491140017_kso1.jpg">
+                             <p>Personalised Gifts</p>
+                             <button>
+                              <span>More like this </span>
+                             </button>
+                          </div>
+                         </div>
+                         <div class="shop">            
+                          <div class="shop2">
+                             <img alt="" src="https://i.etsystatic.com/24866528/r/il/41954d/5400455513/il_340x340.5400455513_3k7s.jpg">
+                             <p>Personalised Gifts</p>
+                             <button>
+                              <span>More like this     </span>
+                             </button>
+                          </div>
+                         </div>
+                         <div class="shop">            
+                          <div class="shop2">
+                             <img alt="" src="https://i.etsystatic.com/11427722/r/il/4513ee/3595949512/il_340x340.3595949512_9fsq.jpg">
+                             <p>Personalised Gifts</p>
+                             <button>
+                              <span>More like this</span>
+                             </button>
+                          </div>
+                         </div>
+                         <div class="shop">            
+                          <div class="shop2">
+                             <img alt="" src="https://i.etsystatic.com/24006251/r/il/76cf48/5708939422/il_340x340.5708939422_t4x4.jpg">
+                             <p>Personalised Gifts</p>
+                             <button>
+                              <span>More like this    </span>
+                             </button>
+                          </div>
+                         </div>
+                         <div class="shop">            
+                          <div class="shop2">
+                             <img alt="" src="https://i.etsystatic.com/44161790/r/il/226159/5729625769/il_340x340.5729625769_3jbx.jpg">
+                             <p>Personalised Gifts</p>
+                             <button>
+                              <span>More like this </span>
+                             </button>
+                          </div>
+                         </div>
+                                       
+               </section>
+              </div>
+
+                <!-- Product -->
+
+                <div class="product-section">
+                  <div class="title">
+                  <h4> our trending product</h4>
+
+                  </div>
+                  {% for b in bambooCraft %}
+                  <div class="product" id="product1">
+                      <div class="product-image">
+                          <a href="{% url 'product-detail' b.id %}"><img src="{{b.product_image.url}}" alt="Product 1"></a>
+                      </div>
+
+                      <div class="pro-details">
+                        <h3 class="h3">{{b.title}}</h3>
+                        <div class="review">
+                          <h3>4.8 &nbsp; (197) . Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h3>
+                          <img src="{% static "app/images/Green_review-removebg-preview.png" %}" alt="">
+                        </div>
+                        <div class="price">
+                          <h3><span class="span">₹{{b.price}} </span> </h3>
+                        </div>
+                      </div>
+                  </div>
+                  {% endfor %}               
+              </div>
+
+{% include "app/footer.html" %}

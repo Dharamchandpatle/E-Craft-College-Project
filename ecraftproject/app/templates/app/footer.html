@@ -1,0 +1,58 @@
+
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Craft E- Commerce Web</title>
+  <!-- css link  -->
+  <link rel="stylesheet" href="{% static "app/css/style.css" %}" />
+
+</head>
+
+<footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section about">
+          <a href="/"><img src="{% static "app/images/logo.png" %}" alt="" height="10%" width="38%"></a>
+          <h2>About Us</h2>
+          <p>Your e-commerce website's mission and vision.</p>
+         
+        </div>
+        <div class="footer-section links">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="/login">Sign-in</a></li>
+            <li><a href="/selling">Selling</a></li>
+            <li><a href="/show">Cart</a></li>
+          </ul>
+        </div>
+        <div class="footer-section links">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/category">Categories </a></li>
+            <li><a href="/aboutus">About Us</a></li>
+            <li><a href="/ngo">NGO's</a></li>
+            <li><a href="/contactus">contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-section social">
+          <h2>Follow Us</h2>
+          <div class="social-links">
+            {% comment %} <a href="https://wa.me/+919988776655?text=I'm%20interested%20in%20to%chat" class="chatbot">
+              <img src="{% static "app/images/whatsabchatbot.jpg" %}" alt=""height="6%" width="90%">
+            </a> {% endcomment %}
+            <a href="#"> <img src="{% static "app/images/instaE-crafty-removebg-preview.png" %}" alt="" class="" height="6%" width="90%"  ></a> 
+            <a href="#">  <img src="{% static "app/images/facebook_e-craft-removebg-preview.png" %}" alt="" class="" height="6%" width="90%" ></a>
+            <a href="#"> <img src="{% static "app/images/Linkedin.png" %}" alt="" class="" height="6%" width="90%" ></a>
+            {% comment %} <a href=""> <img src="{% static "app/images/whatsaap-removebg-preview.png" %}" alt="" class="" height="6%" width="90%" ></a> {% endcomment %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  </body>
+
+</html>

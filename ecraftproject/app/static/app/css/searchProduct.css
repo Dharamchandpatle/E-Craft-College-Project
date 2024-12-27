@@ -1,0 +1,199 @@
+:root {
+    --bg1-color: #f9eeee;
+    /* --bg4-color: #ecbe83; */
+    --bg2-color: #ffeab8;
+    --bg3-color: cadetblue;
+    --orange-color: #f3ab00;
+    --white-color: #ffffff;
+    --black-color: #000;
+    --green-color: rgb(4, 209, 4);
+}
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+html body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background: var(--white-color);
+
+}
+
+.search-products-page {
+
+    >.search-products {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 3rem 0;
+        border-bottom: 2px solid grey;
+        background: var(--bg1-color);
+        padding: 3rem 5rem;
+
+        >.pro-img {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 30%;
+
+        }
+
+        >.pro-details {
+
+            display: flex;
+            justify-content: space-around;
+            width: 70%;
+            flex-direction: column;
+            line-height: 1.9rem;
+
+            >.h2 {
+                color: grey;
+            }
+
+            >.h3 {
+                font-size: 1.5rem;
+            }
+
+            >.price {
+                >h3 {
+                    >.del {
+                        color: grey;
+                    }
+
+                    >.span2 {
+                        color: orangered;
+                    }
+                }
+            }
+
+            >.review {
+                >h3 {
+
+                    >.spanh3 {
+                        color: var(--green-color);
+                    }
+                }
+            }
+
+            >.pro-des {
+                color: rgb(63, 61, 61);
+                line-height: 1.4rem;
+            }
+
+            >.buy-cart {
+                display: flex;
+                gap: 1rem;
+                margin: 1rem 0;
+
+                .btn {
+
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: .6s;
+                    overflow: hidden;
+                    position: relative;
+                    z-index: 1;
+                    width: 150px;
+                    border: 2px solid var(--orange-color);
+                    height: 39px;
+                    border-radius: 49px;
+                    color: #000;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    margin: 10px 0;
+                    text-decoration: none;
+                }
+
+
+
+                .btn::before {
+                    content: "";
+                    top: 0;
+                    left: 0;
+                    position: absolute;
+                    width: 0;
+                    height: 100%;
+                    transition: .5s;
+                    background: transparent;
+                    z-index: -1;
+                }
+
+                .btn:hover::before {
+                    width: 100%;
+                }
+
+                .btn:hover {
+                    color: #ffffff;
+                    border: none;
+                    box-shadow: #f3ab00 0px 3px 7px;
+                }
+
+                .btn::before {
+                    background: var(--orange-color);
+                }
+
+                /* Buy Now ...........  */
+
+                .btn1 {
+                    text-decoration: none;
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: .6s;
+                    overflow: hidden;
+                    position: relative;
+                    z-index: 1;
+                    width: 150px;
+                    border: 2px solid green;
+                    height: 39px;
+                    border-radius: 49px;
+                    color: #000;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    margin: 10px 0;
+                }
+
+                .btn1::before {
+                    content: "";
+                    top: 0;
+                    left: 0;
+                    position: absolute;
+                    width: 0;
+                    height: 100%;
+                    transition: .5s;
+                    background: transparent;
+                    z-index: -1;
+                }
+
+                .btn1:hover::before {
+                    width: 100%;
+                }
+
+                .btn1:hover {
+                    color: #ffffff;
+                    border: none;
+                    box-shadow: var(--green-color) 0px 3px 7px;
+                }
+
+                .btn1::before {
+                    background: var(--green-color);
+                }
+
+
+            }
+
+        }
+
+
+    }
+
+}

@@ -1,0 +1,44 @@
+{% include "app/header.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<title>Add to cart </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{% static "app/css/card.css" %}">
+
+<body>
+    
+      {% for cart in carts %}
+    <div class="buy-now">
+        <div class="left-page">
+            <div class="pro-img">
+                <img style="width: 15rem;height: 15rem;" src="{{cart.product.product_image.url}}" alt="" class="img">
+            </div>
+            <div class="pro-details">
+                <h2 class="h2">Lamp Stand </h2>
+                <h2>{{cart.product.title}}</h2>
+                <h3>{{cart.product.description}}</h3>
+                <h3>QTY : 1 </h3>
+
+                <button type="submit"  id="but" name="submit" class="btn solid">Remove</button>
+
+               
+            </div>
+            <div class="pro-price">
+                {% comment %} <h3>{{cart.product.dis_price}}</h3> {% endcomment %}
+
+            </div>
+            <div class="pro-total">
+                <h3>₹ {{cart.product.price}}</h3>
+
+            </div>
+        </div>
+    </hr>
+        
+    </div>
+      {% endfor %}   
+   
+    {% include "app/footer.html" %}
+</body>
+
+</html>
